@@ -16,17 +16,17 @@ Reasons:
 
 4) Uri validation: uri should contain a protocol.
 
-##Installation:
+## Installation:
 
 ```composer install```
 
-##Usage:
+## Usage:
   ```php trivago csv:convert [options] [--] <file>```
 
 Arguments:
   file                   Csv file path
 
-####Options:
+#### Options:
 ```
  -o, --output[=OUTPUT]  Comma separated list of supported output formats. Defaults to xml and json
 
@@ -49,7 +49,7 @@ To view the respective invalid record detail, pass the debug flag:
 
 ```php trivago csv:convert /path/to/hotels.csv --debug```
 
-#####Sample Output
+##### Sample Output
 
 ```
 Name: "Apartment Dörr" is invalid (contains non-ascii characters).
@@ -74,11 +74,11 @@ pass the --strict flag in the command:
 By default, a json and xml output file will be generated. To specify the output files you want, pass them as a comma
 separated list with the --output flag
 
-######Single output file:
+###### Single output file:
 
 ```php trivago csv:convert /path/to/hotels.csv --output=html```
 
-######Multiple output files:
+###### Multiple output files:
 
 ```php trivago csv:convert /path/to/hotels.csv --output=html,xml,txt```
 
@@ -90,13 +90,13 @@ To view help using this command:
 
 ---
 
-###Running Test:
+### Running Test:
 
 ```bin/phpunit```
 
 ---
 
-###Adding new formats:
+### Adding new formats:
 
  - Implement the Encoder interface
 
@@ -141,7 +141,7 @@ class NewFormatEncoder implements Encoder {
 ```
 
 
-###Final note:
+### Final note:
 
 Even though there are further modifications to be made to improve the quality and
 flexibility of the code (e.g configuring default output formats and encoders), I decided not to do them since no further work will be done on
