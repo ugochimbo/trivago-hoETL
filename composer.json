@@ -1,0 +1,33 @@
+{
+    "name": "trivago/converter",
+    "description": "Converts data to different formats",
+    "keywords": ["trivago", "converter", "csv", "xml", "json"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1.0",
+        "parsecsv/php-parsecsv": "^1.0",
+        "symfony/console": "^4.0",
+        "symfony/serializer": "~3.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Converter\\": "src/",
+            "Console\\": "console/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "test/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
